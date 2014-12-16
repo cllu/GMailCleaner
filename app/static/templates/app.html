@@ -1,0 +1,47 @@
+<div class="app container">
+
+  <h2>Filters</h2>
+  <ul class="filters">
+    <li ng-repeat="filter in filters">
+      <input type="checkbox" ng-model="filter.enabled">
+      {{ filter.label }}: <code>{{ filter.value }}</code>
+    </li>
+  </ul>
+
+  <div class="actions">
+    <button type="button" class="btn btn-large btn-default" ng-click="previewMessages()">Preview Filtered Messages</button>
+    <button type="button" class="btn btn-large btn-default" ng-click="deleteMessages()">Trash Emails</button>
+  </div>
+
+  <div ng-if="inPreviewRequest">
+    requesting...
+  </div>
+
+  <div ng-if="inPreview">
+    About {{ total }} emails:
+    <table class="table table-bordered table-condensed">
+      <thead>
+      <tr>
+        <td>From</td>
+        <td>Subject</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="message in messages">
+        <td>{{ message.sender }}</td>
+        <td>{{ message.subject }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div ng-if="error">
+    <p>Error happens: <span ng-bind="message"></span></p>
+    <p>You probably need to do the <a href="/auth/">authorization</a> again.</p>
+  </div>
+
+  <div ng-if="inDelete">
+    <p>Delete in progress: <span ng-bind="numMessagesDeleted"></span>/<span ng-bind="numMessagesToDelete"></span></p>
+  </div>
+
+</div>

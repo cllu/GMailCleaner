@@ -1,0 +1,185 @@
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+html {
+  position: relative;
+  min-height: 100%;
+}
+.site-wrapper {
+  padding-top: 120px;
+  margin-bottom: 120px;
+}
+footer {
+  height: 120px;
+}
+
+
+html,
+body {
+  background-color: #5F77D3;
+}
+header {
+  background-color: #5F77D3;
+}
+body {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  width: 100%;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  margin-top: 100px;
+  text-align: center;
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.features {
+  list-style-type: none;
+}
+
+/*
+ * Footer
+ */
+
+footer {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+  text-align: center;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  /* Handle the widths */
+  header,
+  footer,
+  .cover-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  header, footer, .cover-container {
+    width: 700px;
+  }
+}
+
+.app {
+  text-align: center;
+}
+
+.app h2 {
+}
+
+.app .filters {
+  text-align: left;
+  margin: 0 auto;
+  padding: 30px 0;
+  list-style-position: inside;
+}
+
+.app .actions {
+}
+
+.app code {
+  text-shadow: none;
+}
