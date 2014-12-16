@@ -157,12 +157,6 @@ footer {
   }
 }
 
-@media (min-width: 992px) {
-  header, footer, .cover-container {
-    width: 700px;
-  }
-}
-
 .app {
   text-align: center;
 }
